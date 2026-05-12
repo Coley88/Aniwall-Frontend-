@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Sparkles, Heart } from 'lucide-react';
+import { Sparkles, Heart, Puzzle } from 'lucide-react';
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -39,6 +39,10 @@ export default function Navbar() {
               fill={pathname === '/favorites' ? 'currentColor' : 'none'}
             />
             Favorites
+          </NavLink>
+          <NavLink to="/puzzle" active={pathname === '/puzzle'}>
+            <Puzzle size={13} className="inline mr-1.5 mb-0.5" />
+            Puzzle
           </NavLink>
         </div>
       </div>
